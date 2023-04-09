@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sufyan Ats Tsaurie</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="#header">Home</a>
+        <a href="#about">About</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <section id="header">
+        <div class="header">
+            <h1>"Jangan pernah takut mencoba hal baru, karena disana kamu akan mendapat ilmu baru."</h1>
+            <a href="#about">Lihat Tentang Saya</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <img src="/assets/image/foto-profil.JPG" alt="Foto Profil">
+            <p>Saya merupakan pribadi yang memiliki rasa kepedulian yang tinggi. Saya dapat mengerti situasi dimana saya dapat menjadi berguna, saya memiliki kecenderungan untuk mengikuti suatu kegiatan yang memotivasi saya untuk menjadi lebih peduli dan meringankan suatu pekerjaan yang cukup berat. Dengan adanya kecenderungan tersebut, saya berharap dapat ikut serta dengan menjadi bagian dari kegiatan yang menurut saya dapat membawa dampak yang cukup besar.</p>
+        </div>
+
+        <div class="experiences">
+            <h2>Pengalaman</h2>
+            <ul>
+                <li>
+                    <h3 class="posisi">Web Development Intern</h3>
+                    <p class="tempat">Kantor Desa Pondok Jaya</p>
+                    <p class="tahun">2021-2022</p>
+                    <p class="deskripsi">Melakukan pembuatan dan penerapan Framework Laravel pada Sistem Pengelolaan Data Vaksin Desa Pondok Jaya</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="education">
+            <h2>Pendidikan</h2>
+            <ul>
+                <li>
+                    <h3 class="tempat">Universitas Raharja</h3>
+                    <p class="gelar">Gelar Sarjana, Teknik Informatika</p>
+                    <p class="tahun">2018-2022</p>
+                    <p class="deskripsi">Skripsi: Penerapan Framework Laravel Pada Sistem Administrasi Di Desa Pondok Jaya Kabupaten Tangerang</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>Laravel</li>
+                <li>Livewire</li>
+                <li>TailwindCSS</li>
+            </ul>
+        </div>
+
+        <div class="interests">
+            <h2>Minat</h2>
+            <ul>
+                <li>Pengembangan Web</li>
+                <li>Kecerdasan Buatan</li>
+                <li>Teknologi Virtual</li>
+            </ul>
+        </div>
+
+        <!-- <div class="award"></div> -->
+    </section>
+
+    <section id="portofolio">
+        <div class="portofolio">
+            <div>
+                <img src="/assets/image/vaksin-dashboard.png" alt="Tampilan Dashboard Administrator - Sistem Pengelolaan Data Vaksin Desa Pondok Jaya Kabupaten Tangerang">
+                <h4>Sistem Pengelolaan Data Vaksin Desa Pondok Jaya Kabupaten Tangerang</h4>
+                <p>Localhost</p>
+            </div>
+    
+            <div>
+                <img src="/assets/image/administrasi-dashboard.png" alt="Tampilan Dashboard Warga - Sistem Administrasi Warga Desa Pondok Jaya Kabupaten Tangerang">
+                <h4>Sistem Administrasi Warga Desa Pondok Jaya Kabupaten Tangerang</h3>
+                <p>Online</p>
+                <a href="https://siponjay.com" target="_blank">Kunjungi &#8594;</a>
+            </div>
+    
+            <div id="github">
+                <a href="https://github.com/azzula" target="_blank">
+                    <img src="/assets/icon/github.png" alt="GitHub">
+                    <p>Kunjungi GitHub saya</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h3>Senang berkenalan dengan anda, hubungi saya melalui..</h3>
+            <a href="https://www.instagram.com/atstsaurie" target="_blank" title="Instagram"><img src="/assets/icon/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/atstsaurie" target="_blank" title="LinkedIn"><img src="/assets/icon/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://wa.me/6281220163296" target="_blank" title="WhatsApp"><img src="/assets/icon/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </section>
+    
+    <script>
+        const sections = document.querySelectorAll("section[id]");
+        window.addEventListener("scroll", navHighlighter);
+
+        function navHighlighter() {
+            let scrollY = window.pageYOffset;
+  
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                sectionId = current.getAttribute("id");
+    
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(".nav a[href*=" + sectionId + "]").classList.add("active");
+                } else {
+                    document.querySelector(".nav a[href*=" + sectionId + "]").classList.remove("active");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

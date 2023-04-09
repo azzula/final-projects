@@ -1,0 +1,386 @@
+@media screen and (max-width: 600px) {
+    .nav {
+        right: 4em;
+        line-height: 4em;
+    }
+
+    section {
+        margin-right: 4em;
+    }
+
+    section#header .header,
+    section#contact .contact {
+        padding-right: 10em;
+    }
+
+    section#about div {
+        margin: 8%;
+    }
+
+    section#about .about {
+        text-align: center;
+    }
+
+    section#about .about img {
+        margin-bottom: 5%;
+    }
+
+    section#about .skills li,
+    section#about .interests li {
+        border: 1px solid #FFE6C7;
+        font-size: small;
+    }
+
+    section#portofolio .portofolio div:first-child {
+        margin-left: 4em;
+    }
+
+    section#contact .contact img {
+        width: 10%;
+    }
+}
+
+@media (min-width:601px) {
+    .nav {
+        right: 6em;
+        line-height: 6em;
+    }
+    
+    section {
+        margin-right: 6em;
+    }
+
+    section#header .header,
+    section#contact .contact {
+        padding-right: 15em;
+    }
+
+    section#about div {
+        margin: 4%;
+    }
+
+    section#about .about {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 4%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#about .about p {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    section#about .skills li,
+    section#about .interests li {
+        border: 2px solid #FFE6C7;
+    }
+
+    section#contact .contact img {
+        width: 5%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    position: fixed;
+    width: 100vh;
+    bottom: 0;
+    transform: rotate(90deg);
+    transform-origin: 100% 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px 0px #454545;
+}
+
+.nav a {
+    display: inline-block;
+    margin: 0 2%;
+    text-decoration: none;
+    color: #454545;
+}
+
+.nav a:hover {
+    color: #FF6000;
+}
+
+.nav .active {
+    color: #FF6000;
+    font-weight: bold;
+}
+
+section#header {
+    height: 90vh;
+    width: 100%;
+    background-color: #FF6000;
+    display: table;
+    padding: 8%;
+}
+
+section#header .header {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+section#header .header h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+
+section#header .header a {
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #FF6000;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+section#header .header a:hover {
+    box-shadow: 0 0 20px 0px #FFFFFF;
+}
+
+section#about {
+    height: 100%;
+    padding: 4%;
+    background-color: #FFE6C7;
+    box-shadow: inset 0 20px 20px -20px #454545;
+}
+
+section#about .about,
+section#about .experiences,
+section#about .education,
+section#about .skills,
+section#about .interests {
+    background-color: #FFFFFF;
+    padding: 4%;
+    box-shadow: 0 0 10px 0px #454545;
+    border-radius: 8px;
+    opacity: 90%;
+    width: 80%;
+}
+
+section#about .about:hover,
+section#about .experiences:hover,
+section#about .education:hover,
+section#about .skills:hover,
+section#about .interests:hover,
+section#portofolio .portofolio div:hover {
+    opacity: 100%;
+}
+
+section#about .about ul,
+section#about .experiences ul,
+section#about .education ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+section#about .about img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0px #454545;
+}
+
+section#about .about p {
+    text-align: center;
+}
+
+section#about .experiences p,
+section#about .education p {
+    margin-top: 10px;
+}
+
+section#about .experiences p.tahun,
+section#about .education p.tahun {
+    color: #454545;
+}
+
+section#about .experiences p.tempat {
+    font-weight: bold;
+}
+
+section#about .education p.gelar {
+    font-weight: bold;
+}
+
+section#about .skills,
+section#about .interests {
+    display: table;
+    width: 80%;
+}
+
+section#about .skills ul,
+section#about .interests ul {
+    margin-top: 10px;
+}
+
+section#about .skills li,
+section#about .interests li {
+    display: table-cell;
+    padding: 15px;
+    background-color: #454545;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+section#about .skills li:hover,
+section#about .interests li:hover {
+    background-color: #FF6000;
+    color: #FFFFFF;
+}
+
+section#about .skills li:first-child,
+section#about .interests li:first-child {
+    border-radius: 8px 0px 0px 8px;
+}
+
+section#about .skills li:last-child,
+section#about .interests li:last-child {
+    border-radius: 0px 8px 8px 0px;
+}
+
+section#portofolio {
+    height: 100%;
+    background-color: #FF6000;
+    padding: 4%;
+    box-shadow: inset 0 20px 20px -20px #454545;
+}
+
+section#portofolio .portofolio {
+    padding: 4%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+section#portofolio .portofolio::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section#portofolio .portofolio::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+section#portofolio .portofolio::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+section#portofolio .portofolio div {
+    background-color: #FFFFFF;
+    margin: 2%;
+    padding: 4%;
+    box-shadow: 0 0 10px 0px #454545;
+    border-radius: 8px;
+    opacity: 90%;
+    display: table;
+    height: 20em;
+    border-radius: 8px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+section#portofolio .portofolio div > * {
+    display: table-row;
+    vertical-align: middle;
+}
+
+section#portofolio .portofolio div img {
+    width: 100%;
+    box-shadow: 0 0 10px 0px #454545;
+}
+
+section#portofolio .portofolio div img:hover {
+    transform: scale(1.2)
+}
+
+section#portofolio .portofolio div p {
+    font-weight: bold;
+}
+
+section#portofolio .portofolio div:first-child p {
+    color: #454545;
+}
+
+section#portofolio .portofolio div p {
+    color: green;
+}
+
+section#portofolio .portofolio div a {
+    text-decoration: none;
+    color: #FF6000;
+}
+
+section#portofolio .portofolio div a:hover {
+    font-weight: bold;
+}
+
+section#portofolio .portofolio div:last-child > * {
+    display: table-cell;
+}
+
+section#portofolio .portofolio div:last-child img {
+    border-radius: 20%;
+}
+
+section#portofolio .portofolio div:last-child p {
+    margin-top: 1em;
+    color: #FF6000;
+    font-weight: normal;
+}
+
+section#portofolio .portofolio div:last-child p:hover {
+    font-weight: bold;
+}
+
+section#contact {
+    height: 90vh;
+    width: 100%;
+    padding: 8%;
+    background-color: #FFE6C7;
+    display: table;
+    box-shadow: inset 0 20px 20px -20px #454545;
+}
+
+section#contact .contact {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+section#contact .contact h3, section#contact .contact a {
+    margin: 1em;
+}
+
+section#contact .contact img:hover {
+    transform: scale(1.2)
+}
